@@ -1,9 +1,9 @@
 'use strict'
 //target(alvo)guarda onde o evento aconteceu
 
- async function pesquisarCep(){
+ async function pesquisarCep(cep){
     // https://corsproxy.io/?url
-    const url = `https://brasilapi.com.br/api/cep/v1/01025-020`
+    const url = `https://brasilapi.com.br/api/cep/v1/${cep}`
     const response = await fetch(url)
     const data = await response.json()
     console.log(data)
